@@ -21,5 +21,6 @@ app.use(routes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
-//my note: importing Sequelize at the top of file from config/connection.js then here use `sequelize.sync()` method to establish the connection to the database. The `sync` part means that this is Sequelize taking the models and connecting them to associated database tables, if it doesn't find a table, it'll create one.
-//nootice 'force:false', if force were set to true, it will drop and re-create all databases tables on start-up.
+//my note during lesson 1: importing Sequelize at the top of file from config/connection.js then here use `sequelize.sync()` method to establish the connection to the database. The `sync` part means that this is Sequelize taking the models and connecting them to associated database tables, if it doesn't find a table, it'll create one.
+//notice 'force:false', if force were set to true, it will drop and re-create all databases tables on start-up.
+//my note during lesson 3: changed force from false to true
